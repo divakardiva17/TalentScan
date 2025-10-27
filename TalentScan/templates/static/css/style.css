@@ -1,0 +1,45 @@
+/* A minimal premium style */
+
+body.bg-gradient { 
+  background: linear-gradient(135deg, #0f172a 0%, #0b1220 100%);
+  background-color: aquamarine;
+  min-height: 100vh;
+  color: #ffffff;
+}
+
+.navbar-custom {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.915), rgba(245, 239, 239, 0.921));
+}
+
+.premium-card {
+  max-width: 900px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+.score-circle {
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+.score-number {
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.card-title {
+  color: #dbeafe;
+}
+
+/* form enhancements */
+.form-control, .btn {
+  border-radius: 8px;
+}

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card shadow mx-auto premium-card">
+  <div class="card-body p-5">
+    <div class="d-flex justify-content-between align-items-start">
+      <div>
+        <h3>Result for {{ name or 'Candidate' }}</h3>
+        <p class="text-muted mb-1">{{ email }}</p>
+        <small class="text-muted">Scanned on {{ timestamp }}</small>
+      </div>
+      <div class="text-center">
+        <div class="score-circle">
+          <div class="score-number">{{ score }}</div>
+        </div>
+        <div class="mt-2 text-muted">Suitability</div>
+      </div>
+    </div>
+
+    <hr>
+
+    <h5>Highlights</h5>
+    <p><strong>Matched skills:</strong>
+      {% if matched_skills %}
+        {{ matched_skills | join(', ') }}
+      {% else %}
+        <span class="text-muted">No required skills matched.</span>
+      {% endif %}
+    </p>
+
+    <p><strong>Years of experience (detected):</strong> {{ years }}</p>
+    <p><strong>Education:</strong> {{ education }}</p>
+
+    <div class="mt-4">
+      <a href="{{ url_for('uploaded_file', filename=filename) }}" class="btn btn-outline-secondary">Download Resume</a>
+      <a href="{{ url_for('index') }}" class="btn btn-primary ms-2">Analyze Another</a>
+    </div>
+  </div>
+</div>
+{% endblock %}
